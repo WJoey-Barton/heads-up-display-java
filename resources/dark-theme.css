@@ -1,0 +1,221 @@
+/* ─────────────────────────────────────────────
+   Journal Dark Theme  —  soft & soothing vibes
+   ───────────────────────────────────────────── */
+
+/* Palette
+   background  : #1a1c2e  (deep midnight blue)
+   surface     : #252840  (muted indigo surface)
+   surface-alt : #2e3155  (slightly lifted)
+   border      : #3d4170  (subtle divider)
+   accent      : #9b8ec4  (soft lavender)
+   accent-glow : #c9b8f0  (light lavender highlight)
+   text-primary: #e8e4f0  (warm off-white)
+   text-muted  : #9491a8  (dusty purple-grey)
+   success     : #82c9a0  (sage green)
+   danger      : #c98282  (muted rose)
+*/
+
+/* ── Root / AnchorPane ──────────────────────── */
+.root {
+    -fx-background-color: #1a1c2e;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+}
+
+/* ── Labels ─────────────────────────────────── */
+.label {
+    -fx-text-fill: #e8e4f0;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+}
+
+/* Section header labels (To Do / Calendar) */
+#ToDo_Label, #Calendar_Label {
+    -fx-text-fill: #c9b8f0;
+    -fx-font-family: "Georgia";
+    -fx-font-style: italic;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, #9b8ec455, 6, 0.4, 0, 1);
+}
+
+/* Info grid labels */
+#Date_Label {
+    -fx-text-fill: #c9b8f0;
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+#WeekOfYear_Label {
+    -fx-text-fill: #9491a8;
+    -fx-font-size: 11px;
+}
+
+#DailyTask_Label {
+    -fx-text-fill: #82c9a0;
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
+
+#DaysTillWedding_Label {
+    -fx-text-fill: #c9b8f0;
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
+
+/* ── TextAreas ───────────────────────────────── */
+.text-area {
+    -fx-background-color: #252840;
+    -fx-background-radius: 10;
+    -fx-border-color: #3d4170;
+    -fx-border-radius: 10;
+    -fx-border-width: 1px;
+    -fx-text-fill: #e8e4f0;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+    -fx-prompt-text-fill: #9491a8;
+    -fx-highlight-fill: #9b8ec455;
+    -fx-highlight-text-fill: #e8e4f0;
+}
+
+.text-area .content {
+    -fx-background-color: #252840;
+    -fx-background-radius: 10;
+}
+
+.text-area:focused {
+    -fx-border-color: #9b8ec4;
+    -fx-effect: dropshadow(gaussian, #9b8ec444, 10, 0.3, 0, 0);
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ── TextFields ──────────────────────────────── */
+.text-field {
+    -fx-background-color: #252840;
+    -fx-background-radius: 8;
+    -fx-border-color: #3d4170;
+    -fx-border-radius: 8;
+    -fx-border-width: 1px;
+    -fx-text-fill: #e8e4f0;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 12px;
+    -fx-prompt-text-fill: #9491a8;
+    -fx-highlight-fill: #9b8ec455;
+    -fx-padding: 6 10 6 10;
+}
+
+.text-field:focused {
+    -fx-border-color: #9b8ec4;
+    -fx-effect: dropshadow(gaussian, #9b8ec433, 8, 0.3, 0, 0);
+}
+
+/* ── Buttons ─────────────────────────────────── */
+.button {
+    -fx-background-color: #2e3155;
+    -fx-background-radius: 8;
+    -fx-border-color: #3d4170;
+    -fx-border-radius: 8;
+    -fx-border-width: 1px;
+    -fx-text-fill: #e8e4f0;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+    -fx-padding: 5 12 5 12;
+}
+
+.button:hover {
+    -fx-background-color: #3a3d6e;
+    -fx-border-color: #9b8ec4;
+    -fx-effect: dropshadow(gaussian, #9b8ec444, 8, 0.3, 0, 0);
+}
+
+.button:pressed {
+    -fx-background-color: #252840;
+    -fx-border-color: #c9b8f0;
+}
+
+/* Add buttons — soft lavender tint */
+#AddTaskToDo_Button, #AddCalendar_Button {
+    -fx-background-color: #332e55;
+    -fx-border-color: #9b8ec4;
+    -fx-text-fill: #c9b8f0;
+}
+
+#AddTaskToDo_Button:hover, #AddCalendar_Button:hover {
+    -fx-background-color: #3d3866;
+    -fx-border-color: #c9b8f0;
+}
+
+/* Remove buttons — muted rose tint */
+#RemoveTask_Button, #RemoveCalendar_Button {
+    -fx-background-color: #3d2e35;
+    -fx-border-color: #c98282;
+    -fx-text-fill: #e8c4c4;
+}
+
+#RemoveTask_Button:hover, #RemoveCalendar_Button:hover {
+    -fx-background-color: #4a3540;
+    -fx-border-color: #e8a0a0;
+}
+
+/* Journal button — sage green tint */
+#Journal_Button {
+    -fx-background-color: #2e3d38;
+    -fx-border-color: #82c9a0;
+    -fx-text-fill: #b2e8c8;
+    -fx-font-style: italic;
+}
+
+#Journal_Button:hover {
+    -fx-background-color: #384d44;
+    -fx-border-color: #a8ddb8;
+    -fx-effect: dropshadow(gaussian, #82c9a044, 8, 0.3, 0, 0);
+}
+
+/* ── GridPane (center info panel) ────────────── */
+.grid-pane {
+    -fx-background-color: #22253e;
+    -fx-background-radius: 12;
+    -fx-border-color: #3d4170;
+    -fx-border-radius: 12;
+    -fx-border-width: 1px;
+    -fx-padding: 6;
+    -fx-effect: dropshadow(gaussian, #00000066, 12, 0.2, 0, 2);
+}
+
+/* ── Scrollbars (subtle) ─────────────────────── */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #3d4170;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #9b8ec4;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: #3d4170;
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
